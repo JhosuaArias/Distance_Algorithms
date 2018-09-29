@@ -1,3 +1,4 @@
 escuela,escuela
 cena,coma
 zanja,panza
+casa,casota
