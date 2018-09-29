@@ -59,7 +59,7 @@ public final class DistanceCalculator {
         return hammingDistance;
     }
 
-    static int computeLevenshteinDistance(String string1, String string2){
+    static int computeLevenshteinDistance(String string1, String string2, boolean stepByStep){
         final int X = string1.length();
         final int Y = string2.length();
         int[][] distance = new int[X+1][Y+1];
@@ -83,15 +83,18 @@ public final class DistanceCalculator {
                                         distance[i-1][j] + 1,       // Deletion
                                         distance[i][j-1] + 1,       // Insertion
                                         distance[i-1][j-1] + cost); // Substitution
-            }
-        }
 
-
-        for (int[] subA : distance) {
-            for(int n : subA) {
-                System.out.print(n + " ");
+                if (stepByStep) {
+                    System.out.println();
+                    System.out.println("Distance Matrix");
+                    for (int[] subA : distance) {
+                        for (int n : subA) {
+                            System.out.print(n + " ");
+                        }
+                        System.out.println();
+                    }
+                }
             }
-            System.out.println();
         }
 
         return distance[X][Y];
