@@ -18,7 +18,7 @@ public final class DistanceCalculator {
             string1 = fillStringWithEmptyChar(string1,string2Length-string1Length);
         }else{
             if(string1Length > string2Length) {
-                string2 = fillStringWithEmptyChar(string2,string2Length-string1Length);
+                string2 = fillStringWithEmptyChar(string2,string1Length-string2Length);
             }
         }
 
