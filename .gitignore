@@ -1,0 +1,14 @@
+# Build output directies
+/target
+*/target
+/build
+*/build
+/out
+*/out
+
+# IntelliJ specific files/directories
+out
+.idea
+*.ipr
+*.iws
+*.iml
