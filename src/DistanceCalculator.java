@@ -1,6 +1,9 @@
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class that provides the distance algorithms.
+ */
 final class DistanceCalculator {
 
     /**
@@ -59,6 +62,14 @@ final class DistanceCalculator {
         return hammingDistance;
     }
 
+    /**
+     * Compares 2 strings with the same size, and computes the Levenshtein distance between them.
+     * @param string1 a string to compare.
+     * @param string2 another string to compare.
+     * @param stepByStep indicates if the matrix should be printed step by step.
+     * @return an integer number that indicates the Hamming distance between 2 string. The higher this number is,
+     *         the more different are those strings.
+     */
     static int computeLevenshteinDistance(String string1, String string2, boolean stepByStep){
         final int X = string1.length();
         final int Y = string2.length();
@@ -100,6 +111,13 @@ final class DistanceCalculator {
         return distance[X][Y];
     }
 
+    /**
+     * Minimum between 3 numbers
+     * @param n1 first number to compare
+     * @param n2 second number to compare
+     * @param n3 third number to compare
+     * @return the smallest number
+     */
     private static int min(int n1, int n2, int n3) {
         if (n1 < n2 && n1 < n3)
             return n1;

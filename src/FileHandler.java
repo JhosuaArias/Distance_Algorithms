@@ -5,8 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * Class in charge of reading files used for testing.
+ */
 class FileHandler {
 
+    /**
+     * Reads the file specified by a path
+     * @param path path to a file
+     * @return the file in a String Array List, the String array contains the pair of terms.
+     */
     static List<String[]> readFile(String path) {
         List<String[]> stringArray = new ArrayList<>();
 
