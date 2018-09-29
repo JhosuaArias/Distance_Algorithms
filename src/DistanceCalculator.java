@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public final class DistanceCalculator {
+final class DistanceCalculator {
 
     /**
      * Computes the Hamming distance between 2 strings.
@@ -10,7 +10,7 @@ public final class DistanceCalculator {
      * @return an integer number that indicates the Hamming distance between 2 string. The higher this number is,
      *         the more different are those strings.
      */
-    public static int computeHammingDistance(String string1, String string2){
+    static int computeHammingDistance(String string1, String string2){
         int string1Length = string1.length();
         int string2Length = string2.length();
 
@@ -117,7 +117,7 @@ public final class DistanceCalculator {
      * @return an integer number that indicates the Bigrams distance between 2 string. This number is in the range of
      *         [0-1], the more close to 0 is this number, the more different this strings are.
      */
-    public static double computeBigramsDistance(String string1, String string2) {
+    static double computeBigramsDistance(String string1, String string2) {
         Set<String> uniqueBigramsString1 = getUniqueBigrams(string1);
         Set<String> uniqueBigramsString2 = getUniqueBigrams(string2);
 
