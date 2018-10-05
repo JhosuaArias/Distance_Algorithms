@@ -2,4 +2,4 @@ escuela,escuela
 cena,coma
 zanja,panza
 casa,casota
-cursos gratis de python, curzos gratis de pithon
+cursos gratis de python, curzos gratis de paiton
